@@ -1,0 +1,30 @@
+[
+  {
+    "childId": "REPLACE_WITH_CHILD_ID_FROM_MONGODB",
+    "childName": "Child Name Here",
+    "bedNumber": "1",
+    "cameraId": "cam1",
+    "color": "#4f46e5",
+    "points": [
+      { "x": 0.0, "y": 0.0 },
+      { "x": 0.5, "y": 0.0 },
+      { "x": 0.5, "y": 1.0 },
+      { "x": 0.0, "y": 1.0 }
+    ]
+  }
+]
+
+/* ──────────────────────────────────────────────────────────────
+   THIS IS JUST A TEMPLATE — Replace with your real zones!
+
+   HOW TO GET YOUR REAL zones.json:
+   1. Open Sleep Guardian in browser
+   2. Press F12 → Console tab
+   3. Type:  copy(localStorage.getItem('sg_bed_zones'))
+   4. Delete everything in this file
+   5. Paste what you copied
+   6. Save the file
+
+   Your real zones will have correct childId, childName,
+   bedNumber, and actual polygon points from your zone drawing.
+────────────────────────────────────────────────────────────── */
