@@ -786,7 +786,10 @@
 
 <script>
 // Dynamic API URL —// Backend API URL
-const API = `https://sleep-guardian.onrender.com/api`;
+const API =
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000/api"
+    : "https://sleep-guardian.onrender.com/api";
 
 let token = localStorage.getItem('sg_token');
 let currentUser = JSON.parse(localStorage.getItem('sg_user') || 'null');
@@ -875,7 +878,11 @@ function logout() {
 
 // =================== SOCKET ===================
 function initSocket() {
-  socket = io('https://sleep-guardian.onrender.com');
+  socket = io(
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000"
+    : "https://sleep-guardian.onrender.com"
+);
   socket.on('connect', () => document.getElementById('liveStatus').textContent = 'Live');
   socket.on('disconnect', () => document.getElementById('liveStatus').textContent = 'Offline');
   socket.on('alert:new', (alert) => {
